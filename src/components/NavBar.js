@@ -1,4 +1,5 @@
 import React from 'react'
+import GifSearch from './GifSearch'
 
 function NavBar(props){
   const colors = {
@@ -14,6 +15,7 @@ function NavBar(props){
             { props.title }
           </a>
         </div>
+        <GifSearch changeQValue={props.changeQValue} qValue={props.qValue} />
       </div>
     </nav>
   )
