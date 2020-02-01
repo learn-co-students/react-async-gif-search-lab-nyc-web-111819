@@ -20,6 +20,9 @@ class GifListContainer extends React.Component {
     submitHandler = (event) => {
         event.preventDefault()
         this.getImages()
+        this.setState({
+            gifQuery: ""
+        })
     }
 
     getImages = () => {
@@ -37,7 +40,7 @@ class GifListContainer extends React.Component {
     
     render() {
         return (
-            <div> 
+            <div className="gifList container"> 
                 <GifSearch submitHandler={this.submitHandler} gifQuery={this.state.gifQuery} handleChange={this.handleChange}/>
                 <br />
                 <GifList imageURLs={this.state.imageURLs}/>
