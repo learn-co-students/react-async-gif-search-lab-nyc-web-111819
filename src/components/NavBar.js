@@ -15,7 +15,7 @@ function NavBar(props){
             { props.title }
           </a>
         </div>
-        <GifSearch changeQValue={props.changeQValue} qValue={props.qValue} />
+        <GifSearch changeQValue={props.changeQValue} changeFetchValue={props.changeFetchValue} qValue={props.qValue} />
       </div>
     </nav>
   )
